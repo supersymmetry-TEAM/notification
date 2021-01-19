@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request, redirect, send_file
 app = Flask(__name__)
 
-@app.route('/0')
-def get_image():
-    name = "./source/gi0.png"
-    return send_file(name)
 @app.route('/1')
 def get_image():
-    name = "./source/gi1.png"
+    name = "./source/1.png"
+    return send_file(name)
+@app.route('/2')
+def get_image():
+    name = "./source/2.png"
     return send_file(name)
 @app.route('/blog')
 def index():
