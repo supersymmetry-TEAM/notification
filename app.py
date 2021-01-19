@@ -3,11 +3,11 @@ app = Flask(__name__)
 
 @app.route('/1')
 def get_image_1():
-    name = "./source/1.png"
+    name = "./source/01.png"
     return send_file(name)
 @app.route('/2')
 def get_image_2():
-    name = "./source/2.png"
+    name = "./source/02.png"
     return send_file(name)
 @app.route('/blog')
 def index():
