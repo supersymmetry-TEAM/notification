@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, send_file
 app = Flask(__name__)
 
 @app.route('/contributer')
@@ -8,7 +8,11 @@ def aitest():
 @app.route('/')
 def index():
     return render_template('index.html')
-
+# http://example.com/get_image?type=1
+@app.route('/get_image')
+def get_image():
+    name = "./source/gi.png"
+    return send_file(name)
 @app.route('/Privacy')
 def Pri():
     return render_template('Privacy.html')
